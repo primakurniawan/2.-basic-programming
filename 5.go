@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func palindrome(input string) bool {
 
@@ -11,9 +13,9 @@ func palindrome(input string) bool {
 		if string(char) != string(input[len(input)-(i+1)]) {
 			return false
 		}
-		// if math.Ceil(len(input)/2) == i  {
-		// 	return true
-		// }
+		if len(input)/2-1 == i  {
+			return true
+		}
 	}
 
 	return true
@@ -21,5 +23,5 @@ func palindrome(input string) bool {
 }
 
 func main() {
-	fmt.Println(palindrome("katakx"))
+	fmt.Println(palindrome("katak"))
 }
